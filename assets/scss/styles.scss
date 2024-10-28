@@ -1,0 +1,24 @@
+/*======= CONFIG =======*/
+@use "./config/variables";
+/*======= BASE =======*/
+@use "./base/base";
+/*======= LAYOUT =======*/
+@use "./layout/layout";
+/*======= COMPONENTS =======*/
+@use "./components/header";
+@use "./components/home";
+@use "./components/perfil";
+@use "./components/info";
+@use "./components/about";
+@use "./components/skills";
+@use "./components/button";
+@use "./components/projects";
+@use "./components/services";
+@use "./components/experience";
+@use "./components/contact";
+@use "./components/footer";
+@use "./components/scrollbar";
+@use "./components/scrollup";
+
+/*======= BREAKPOINTS =======*/
+@use "./screen/breakpoints";
