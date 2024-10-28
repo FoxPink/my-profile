@@ -1,0 +1,26 @@
+.skills {
+    &__title {
+        font-size: var(--h2-font-size);
+    }
+
+    &__item {
+        width: 1.5rem;
+        transition: transform .4s;
+
+        &:hover {
+            transform: translateY(-.25rem);
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-block: 1.5rem;
+    }
+
+    &__description {
+        font-size: var(--small-font-size);
+    }
+}
