@@ -1,0 +1,47 @@
+.info, .about, .skills {
+    background-color: var(--container-color);
+    padding: 2rem 1.5rem;
+    border-radius: 2rem;
+
+    &__circle {
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--first-color);
+        border-radius: 50%;
+    }
+
+    &__name {
+        font: var(--fontrregular) var(--h1-font-size) var(--second-font);
+    }
+
+    &__data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: .5rem;
+    }
+
+    &__image {
+        background: var(--conic-gradient);
+        height: 180px;
+        border-radius: 2rem;
+        display: grid;
+        margin-block: 1.5rem;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 140px;
+        justify-self: center;
+        align-self: flex-end;
+    }
+
+    &__description {
+        font-size: var(--small-font-size);
+        margin-bottom: 2rem;
+    }
+
+    & .button {
+        width: 100%;
+    }
+}
