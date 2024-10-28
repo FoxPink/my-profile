@@ -1,0 +1,55 @@
+.about {
+    &__name {
+        font: var(--font-regular) var(--h1-font-size) var(--body-font);
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-regular);
+        margin-bottom: 1rem;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.5rem;
+        margin-block: 2rem;
+    }
+
+    &__link {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: var(--white-color);
+        color: var(--black-color);
+        font-size: 1.5rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        transition: background-color .4s, color .4s;
+
+        &:hover {
+            background-color: var(--first-color);
+            color: var(--white-color);
+        }
+    }
+
+    &__image {
+        background: var(--conic-gradient);
+        height: 180px;
+        border-radius: 2rem;
+        display: grid;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 250px;
+        justify-self: center;
+        transform: translateY(-2.5rem);
+    }
+
+    &__note {
+        font-size: var(--small-font-size);
+        margin-block: 1rem 2rem;
+    }
+
+    & .button {
+        width: 100%;
+    }
+}
