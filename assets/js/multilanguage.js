@@ -14,7 +14,7 @@ i18next.use(i18nextHttpBackend).init(
     lng: "en",
     debug: false,
     backend: {
-      loadPath: "/locales/{{lng}}/translation.json",
+      loadPath: baseURL + "/locales/{{lng}}/translation.json",
     },
   },
   function (err, t) {
