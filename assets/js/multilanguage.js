@@ -1,3 +1,14 @@
+let baseURL = "";
+if (
+  window.location.hostname === "127.0.0.1" ||
+  window.location.hostname === "localhost"
+) {
+  baseURL = "";
+} else {
+  baseURL = window.location.origin + window.location.pathname;
+  baseURL = baseURL.replace("index.html", "");
+}
+
 i18next.use(i18nextHttpBackend).init(
   {
     lng: "en",
@@ -39,9 +50,9 @@ document
 
       var button = document.getElementById("languageSwitcher");
       if (newLang === "vi") {
-        button.innerHTML = `<img id="flagIcon" src="../../locales/flag/united-states-of-america.png" alt="USA Flag" ">`;
+        button.innerHTML = `<img id="flagIcon" src="${baseURL}locales/flag/united-states-of-america.png" alt="USA Flag" />`;
       } else {
-        button.innerHTML = `<img id="flagIcon" src="../../locales/flag/vietnam.png" alt="Vietnam Flag" ">`;
+        button.innerHTML = `<img id="flagIcon" src="${baseURL}slocales/flag/vietnam.png" alt="Vietnam Flag" ">`;
       }
     });
   });
