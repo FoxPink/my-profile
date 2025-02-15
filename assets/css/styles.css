@@ -52,6 +52,7 @@
   --nav-color: hsla(0, 0%, 98%, 0.1);
   --title-color: hsl(0, 0%, 98%);
   --footer-color: transparent;
+  --bg-buttonScroll: hsla(0, 0%, 98%, 0.1);
 }
 
 /* Dark mode */
@@ -60,16 +61,21 @@ body.dark-mode {
   --nav-color: hsl(var(--hue), 2%, 10%);
   --title-color: hsl(0, 0%, 1%);
   --footer-color: hsl(var(--hue), 2%, 10%);
+  --bg-buttonScroll: #000
 }
 
 #themeSwitcher {
   background-color: transparent;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #themeIcon {
-  width: 100%;
+  width: 24px;
+  height: 24px;
 }
 
 /*========== Responsive typography ==========*/
@@ -687,7 +693,7 @@ img {
   position: fixed;
   right: 1rem;
   bottom: -50%;
-  background-color: hsla(0, 0%, 98%, 0.1);
+  background-color: var(--bg-buttonScroll);
   display: inline-flex;
   padding: 6px;
   color: var(--white-color);
@@ -741,10 +747,12 @@ img {
   align-items: center;
   width: max-content;
   background-color: transparent;
+  width: 30px;
+  height: 30px;
 
   & img {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -757,7 +765,7 @@ img {
   }
 
   .nav {
-    padding: 1rem;
+    padding: 0.2rem;
   }
 }
 
