@@ -137,6 +137,7 @@ img {
   font-size: var(--h2-font-size);
   text-align: center;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 .main {
@@ -707,6 +708,19 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button__flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  background-color: transparent;
+
+  & img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /*======= BREAKPOINTS =======*/

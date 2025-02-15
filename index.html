@@ -16,6 +16,9 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
+    <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@latest/i18nextHttpBackend.js"></script>
+
     <title>Portfolio website - FoxPink</title>
   </head>
 
@@ -48,6 +51,15 @@
             <i class="ri-send-plane-line"></i>
           </a>
         </li>
+        <li>
+         <button id="languageSwitcher" class="button__flag">
+            <img
+              id="flagIcon"
+              src="./locales/flag/vietnam.png"
+              alt="Vietnam Flag"
+            />
+          </button>
+        </li>
       </ul>
     </nav>
 
@@ -66,8 +78,12 @@
             <div class="perfil__data">
               <h1 class="perfil__name">FoxPink</h1>
               <div class="perfil__buttons">
-                <a href="#projects" class="button">Projects</a>
-                <a href="#services" class="button button__black">Services</a>
+                <a href="#projects" class="button" data-i18n="projects"></a>
+                <a
+                  href="#services"
+                  class="button button__black"
+                  data-i18n="services"
+                ></a>
               </div>
             </div>
           </div>
@@ -86,28 +102,24 @@
                 class="info__img"
               />
             </div>
-            <p class="info__description">
-              Dedicated to designing and developing seamless web and mobile app
-              experiences with engaging interfaces.
-            </p>
-            <a href="#" download target="_blank" class="button button__black"
-              >Download CV</a
-            >
+            <p class="info__description" data-i18n="aboutDescription"></p>
+            <a
+              href="#"
+              download
+              target="_blank"
+              class="button button__black"
+              data-i18n="downloadCV"
+            ></a>
           </div>
 
           <!--===== ABOUT =====-->
           <div class="about">
-            <h3 class="about__name">
-              Duy Nguyen - <br />
-              Web & App Developer
-            </h3>
+            <h3 class="about__name" data-i18n="nameAndTitle"></h3>
 
-            <p class="about__description">
-              I specialize in designing and developing modern, high-performance
-              websites and mobile applications. With a strong focus on user
-              experience and innovative solutions, I strive to create seamless
-              and engaging digital products.
-            </p>
+            <p
+              class="about__description"
+              data-i18n="specializationDescription"
+            ></p>
             <div class="about__social">
               <a
                 href="https://www.facebook.com/foxpinknad"
@@ -134,20 +146,14 @@
             <div class="about__image column-center">
               <img src="assets/img/logo.png" alt="image" class="about__img" />
             </div>
-            <p class="about__note">
-              I am a passionate Web & App Developer, dedicated to crafting
-              modern and user-friendly digital experiences. With expertise in
-              UI/UX design and full-stack development, I create high-performance
-              websites and mobile applications that stand out. Let’s work
-              together to bring your ideas to life!
-            </p>
+            <p class="about__note" data-i18n="intro"></p>
 
-            <a href="#contact" class="button">Contact me</a>
+            <a href="#contact" class="button" data-i18n="contactMe"></a>
           </div>
 
           <!--===== SKILLS =====-->
           <div class="skills">
-            <h2 class="skills__title">Skills</h2>
+            <h2 class="skills__title" data-i18n="skills"></h2>
             <div class="skills__items">
               <img
                 src="assets/img/skills-html.svg"
@@ -200,17 +206,16 @@
                 class="skills__item"
               />
             </div>
-            <p class="skills__description">
-              Visit the projects section to see the work done with these web
-              technologies
-            </p>
+            <p class="skills__description" data-i18n="projectsSection"></p>
           </div>
         </div>
       </section>
 
       <!--==================== PROJECTS ====================-->
       <section class="projects section" id="projects">
-        <h2 class="section__title">RECENT PROJECTS</h2>
+        <h2 class="section__title" data-i18n="recentProjects">
+          recentProjects
+        </h2>
 
         <div class="projects__container container grid">
           <article class="projects__card">
@@ -422,111 +427,129 @@
 
       <!--==================== SERVICES ====================-->
       <section class="services section" id="services">
-        <h2 class="section__title">SERVICES I OFFER</h2>
+        <h2 class="section__title" data-i18n="servicesIOffer"></h2>
         <div class="services__container container grid">
           <article class="services__card">
             <div class="services__icon">
               <div class="services__circle"></div>
               <i class="ri-code-box-line"></i>
             </div>
-            <h3 class="services__name">Web Development</h3>
-            <p class="services__description">
-              Short description of the service offered to users to obtain a
-              personalized project.
-            </p>
+            <h3 class="services__name" data-i18n="webDevelopment"></h3>
+            <p
+              class="services__description"
+              data-i18n="webDevelopmentDescription"
+            ></p>
           </article>
           <article class="services__card">
             <div class="services__icon">
               <div class="services__circle"></div>
               <i class="ri-pen-nib-line"></i>
             </div>
-            <h3 class="services__name">Web Design</h3>
-            <p class="services__description">
-              Short description of the service offered to users to obtain a
-              personalized project.
-            </p>
+            <h3 class="services__name" data-i18n="webDesign">Web Design</h3>
+            <p
+              class="services__description"
+              data-i18n="webDesignDescription"
+            ></p>
           </article>
           <article class="services__card">
             <div class="services__icon">
               <div class="services__circle"></div>
               <i class="ri-seo-line"></i>
             </div>
-            <h3 class="services__name">Seo (Web Pages)</h3>
-            <p class="services__description">
-              Short description of the service offered to users to obtain a
-              personalized project.
-            </p>
+            <h3 class="services__name" data-i18n="seoWebPages">
+              Seo (Web Pages)
+            </h3>
+            <p
+              class="services__description"
+              data-i18n="seoWebPagesDescription"
+            ></p>
           </article>
           <article class="services__card">
             <div class="services__icon">
               <div class="services__circle"></div>
               <i class="ri-smartphone-line"></i>
             </div>
-            <h3 class="services__name">Mobile Development</h3>
-            <p class="services__description">
-              Building high-performance mobile applications tailored to your
-              needs, ensuring seamless user experiences.
-            </p>
+            <h3 class="services__name" data-i18n="mobileDevelopment"></h3>
+            <p
+              class="services__description"
+              data-i18n="mobileDevelopmentDescription"
+            ></p>
           </article>
           <article class="services__card">
             <div class="services__icon">
               <div class="services__circle"></div>
               <i class="ri-focus-3-line"></i>
             </div>
-            <h3 class="services__name">Cross-platform (iOS & Android)</h3>
-            <p class="services__description">
-              Developing fast and responsive mobile applications that work
-              seamlessly across both iOS and Android platforms.
-            </p>
+            <h3 class="services__name" data-i18n="crossPlatform">
+              Cross-platform (iOS & Android)
+            </h3>
+            <p
+              class="services__description"
+              data-i18n="crossPlatformDescription"
+            ></p>
           </article>
           <article class="services__card">
             <div class="services__icon">
               <div class="services__circle"></div>
               <i class="ri-git-repository-private-line"></i>
             </div>
-            <h3 class="services__name">Secure & optimized architecture</h3>
-            <p class="services__description">
-              Building secure and high-performance architectures that protect
-              user data while ensuring seamless scalability.
-            </p>
+            <h3
+              class="services__name"
+              data-i18n="secureOptimizedArchitecture"
+            ></h3>
+            <p
+              class="services__description"
+              data-i18n="secureOptimizedArchitectureDescription"
+            ></p>
           </article>
         </div>
       </section>
 
       <!--==================== EXPERIENCE ====================-->
       <section class="experience section" id="experience">
-        <h2 class="section__title">EXPERIENCE OR WORK</h2>
+        <h2 class="section__title" data-i18n="experienceOrWork"></h2>
         <div class="experience__container container grid">
           <article class="experience__card">
             <h2 class="experience__company">Adobe</h2>
             <div class="experience__data">
-              <h3 class="experience__profession">Website Development</h3>
-              <span class="experience__date">08/22 - Present</span>
-              <p class="experience__description">
-                Short description of the work you do or did in the company.
-              </p>
+              <h3
+                class="experience__profession"
+                data-i18n="webDevelopment"
+              ></h3>
+              <span class="experience__date" data-i18n="present"></span>
+              <p
+                class="experience__description"
+                data-i18n="experienceAdobeDescription"
+              ></p>
             </div>
           </article>
 
           <article class="experience__card">
             <h2 class="experience__company">Google</h2>
             <div class="experience__data">
-              <h3 class="experience__profession">Web Product Designer</h3>
+              <h3
+                class="experience__profession"
+                data-i18n="webProductDesigner"
+              ></h3>
               <span class="experience__date">02/22 - 01/23</span>
-              <p class="experience__description">
-                Short description of the work you do or did in the company.
-              </p>
+              <p
+                class="experience__description"
+                data-i18n="experienceGoogleDescription"
+              ></p>
             </div>
           </article>
 
           <article class="experience__card">
             <h2 class="experience__company">Figma</h2>
             <div class="experience__data">
-              <h3 class="experience__profession">Web Designer</h3>
+              <h3 class="experience__profession" data-i18n="webDesigner">
+                Web Designer
+              </h3>
               <span class="experience__date">05/23 - 11/23</span>
-              <p class="experience__description">
-                Short description of the work you do or did in the company.
-              </p>
+              <p
+                class="experience__description"
+                data-i18n="experienceFigmaDescription"
+              ></p>
             </div>
           </article>
         </div>
@@ -534,31 +557,35 @@
 
       <!--==================== CONTACT ====================-->
       <section class="contact section" id="contact">
-        <h2 class="section__title">CONTACT ME</h2>
+        <h2 class="section__title" data-i18n="contactMe"></h2>
         <div class="contact__container container grid">
           <form action="" class="contact__form grid" id="contact-form">
             <div class="contact__group grid">
               <input
                 type="text"
                 name="user_name"
-                placeholder="Names"
+                data-i18n="[placeholder]names"
                 required
                 class="contact__input"
               />
               <input
                 type="email"
                 name="user_email"
-                placeholder="Email"
+                data-i18n="[placeholder]email"
                 required
                 class="contact__input"
               />
             </div>
             <textarea
               name="user_message"
-              placeholder="Message"
+              data-i18n="[placeholder]message"
               class="contact__input contact__area"
             ></textarea>
-            <button type="submit" class="button contact__button">
+            <button
+              type="submit"
+              class="button contact__button"
+              data-i18n="sendMessage"
+            >
               Send Message
             </button>
             <p class="contact__message" id="contact-message"></p>
@@ -575,15 +602,17 @@
 
           <ul class="footer__links">
             <li>
-              <a href="#home" class="footer__link">Home</a>
+              <a href="#home" class="footer__link" data-i18n="home"></a>
             </li>
 
             <li>
-              <a href="#projects" class="footer__link">Projects</a>
+              <a href="#projects" class="footer__link" data-i18n="projects"></a>
             </li>
 
             <li>
-              <a href="#services" class="footer__link">Services</a>
+              <a href="#services" class="footer__link" data-i18n="services"
+                >Services</a
+              >
             </li>
           </ul>
         </div>
@@ -608,7 +637,7 @@
           </a>
         </div>
       </div>
-      <span class="footer__copy"> &#169; All Rights Reserved By FoxPink </span>
+      <span class="footer__copy" data-i18n="allRightsReserved"></span>
     </footer>
 
     <!--========== SCROLL UP ==========-->
@@ -623,5 +652,7 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/multilange.js" type="module"></script>
   </body>
 </html>
