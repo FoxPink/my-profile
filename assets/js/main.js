@@ -1,3 +1,14 @@
+let baseURL = "";
+if (
+  window.location.hostname === "127.0.0.1" ||
+  window.location.hostname === "localhost"
+) {
+  baseURL = "";
+} else {
+  baseURL = window.location.origin + window.location.pathname;
+  baseURL = baseURL.replace("index.html", "");
+}
+
 /*=============== EMAIL JS ===============*/
 const contactForm = document.getElementById("contact-form"),
   contactMessage = document.getElementById("contact-message");
@@ -85,3 +96,32 @@ sr.reveal(".about", { origin: "right", delay: 1200 });
 sr.reveal(".projects__card, .services__card, .experience__card", {
   interval: 100,
 });
+
+// Dark mode
+const icons = {
+  light: baseURL + "assets/img/dark-mode.png",
+  dark: baseURL + "assets/img/sun-mode.png",
+};
+const themeSwitcher = document.getElementById("themeSwitcher");
+const themeIcon = document.getElementById("themeIcon");
+
+const currentTheme = localStorage.getItem("theme") || "light";
+setTheme(currentTheme);
+
+themeSwitcher.addEventListener("click", function () {
+  const newTheme = document.body.classList.contains("dark-mode")
+    ? "light"
+    : "dark";
+  setTheme(newTheme);
+  localStorage.setItem("theme", newTheme);
+});
+
+function setTheme(theme) {
+  if (theme === "dark") {
+    document.body.classList.add("dark-mode");
+    themeIcon.src = icons.dark;
+  } else {
+    document.body.classList.remove("dark-mode");
+    themeIcon.src = icons.light;
+  }
+}
