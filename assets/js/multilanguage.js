@@ -52,7 +52,7 @@ document
       if (newLang === "vi") {
         button.innerHTML = `<img id="flagIcon" src="${baseURL}locales/flag/united-states-of-america.png" alt="USA Flag" />`;
       } else {
-        button.innerHTML = `<img id="flagIcon" src="${baseURL}slocales/flag/vietnam.png" alt="Vietnam Flag" ">`;
+        button.innerHTML = `<img id="flagIcon" src="${baseURL}locales/flag/vietnam.png" alt="Vietnam Flag" ">`;
       }
     });
   });
