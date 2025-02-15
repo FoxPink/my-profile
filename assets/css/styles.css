@@ -48,6 +48,28 @@
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
+
+  --nav-color: hsla(0, 0%, 98%, 0.1);
+  --title-color: hsl(0, 0%, 98%);
+  --footer-color: transparent;
+}
+
+/* Dark mode */
+body.dark-mode {
+  --body-color: #fff;
+  --nav-color: hsl(var(--hue), 2%, 10%);
+  --title-color: hsl(0, 0%, 1%);
+  --footer-color: hsl(var(--hue), 2%, 10%);
+}
+
+#themeSwitcher {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+}
+
+#themeIcon {
+  width: 100%;
 }
 
 /*========== Responsive typography ==========*/
@@ -138,6 +160,7 @@ img {
   text-align: center;
   margin-bottom: 2rem;
   text-transform: uppercase;
+  color: var(--title-color);
 }
 
 .main {
@@ -151,7 +174,7 @@ img {
   bottom: 1.5rem;
   left: 0;
   right: 0;
-  background-color: hsla(0, 0%, 98%, 0.1);
+  background-color: var(--nav-color);
   width: 88%;
   margin-inline: auto;
   backdrop-filter: blur(16px);
@@ -517,6 +540,7 @@ img {
 
 .experience__company {
   font-size: var(--h2-font-size);
+  color: var(--title-color);
 }
 
 .experience__data {
@@ -584,6 +608,7 @@ img {
 
 .footer {
   padding-block: 2rem 8rem;
+  background-color: var(--footer-color);
 }
 
 .footer__container {

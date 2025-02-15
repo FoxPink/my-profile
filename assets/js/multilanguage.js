@@ -1,17 +1,8 @@
-let baseURL = "";
-if (
-  window.location.hostname === "127.0.0.1" ||
-  window.location.hostname === "localhost"
-) {
-  baseURL = "";
-} else {
-  baseURL = window.location.origin + window.location.pathname;
-  baseURL = baseURL.replace("index.html", "");
-}
+const savedLang = localStorage.getItem('i18nextLng') || 'en';
 
 i18next.use(i18nextHttpBackend).init(
   {
-    lng: "en",
+    lng: savedLang,
     debug: false,
     backend: {
       loadPath: baseURL + "/locales/{{lng}}/translation.json",
@@ -42,13 +33,15 @@ function updateContent() {
 document
   .getElementById("languageSwitcher")
   .addEventListener("click", function () {
-    var currentLang = i18next.language;
-    var newLang = currentLang === "en" ? "vi" : "en";
+    const currentLang = i18next.language;
+    const newLang = currentLang === "en" ? "vi" : "en";
 
     i18next.changeLanguage(newLang, function (err, t) {
       updateContent();
 
-      var button = document.getElementById("languageSwitcher");
+      localStorage.setItem('i18nextLng', newLang);
+
+      const button = document.getElementById("languageSwitcher");
       if (newLang === "vi") {
         button.innerHTML = `<img id="flagIcon" src="${baseURL}locales/flag/united-states-of-america.png" alt="USA Flag" />`;
       } else {
