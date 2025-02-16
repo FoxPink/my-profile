@@ -756,6 +756,13 @@ img {
   }
 }
 
+.comingSoon {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
 /*======= BREAKPOINTS =======*/
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
